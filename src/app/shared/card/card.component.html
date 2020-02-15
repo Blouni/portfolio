@@ -1,1 +1,8 @@
-<p>card works!</p>
+<div class="card">
+    <div *ngIf="_card.title !== ''" class="title">
+        {{_card.title}}
+    </div>
+    <div class="content">
+        {{_card.content}}
+    </div>
+</div>

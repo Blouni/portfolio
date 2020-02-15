@@ -1,0 +1,15 @@
+.card{
+    width: calc(100% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    .title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .content{
+        padding-left: 10px;
+    }
+}
