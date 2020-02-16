@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  active: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toogleSidebar(){
+    this.active = !this.active;
+  }
+  toogleSidebarIfActive(){
+    if(this.active){
+      this.active = false;
+    }
+  }
 }

@@ -10,6 +10,7 @@ export class ListComponent implements OnInit {
   @Input() set cardList(cardList: Array<Card>){
     this._cardList = cardList;
   }
+  @Input() title: string = "";
   _cardList: Card[] = new Array<Card>();
   constructor() { }
 

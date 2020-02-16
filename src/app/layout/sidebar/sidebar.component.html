@@ -1,3 +1,13 @@
-<div class="sidebar">
-
+<div class="sidebar-background" [ngClass]="{'sidebar-background-active': active}" (click)="toogleSidebarIfActive()">
+</div>
+<div class="sidebar-container" [ngClass]="{'sidebar-container-active': active}">
+    <div class="content">
+        <div class="toogle" [ngClass]="{'toogle-active': active}" (click)="toogleSidebar()">
+            <div id="nav-icon4" [ngClass]="{'active': active}">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
 </div>

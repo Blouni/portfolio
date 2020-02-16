@@ -1,11 +1,5 @@
 <div style="padding-top: 40px;">
-    <div style="width: 25vw; margin: 50px; display: inline-block;">
-        <app-list [cardList]="cardList"></app-list>
-    </div>
-    <div style="width: 25vw; margin: 50px; display: inline-block;">
-        <app-list [cardList]="cardList"></app-list>
-    </div>
-    <div style="width: 25vw; margin: 50px; display: inline-block;">
-        <app-list [cardList]="cardList"></app-list>
+    <div style="width: 25vw; margin: 50px; display: inline-block;" *ngFor="let list of lists">
+        <app-list [cardList]="list.cardList" [title]="list.title"></app-list>
     </div>
 </div>

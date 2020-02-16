@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from 'src/app/model/card';
+import data from '../../../assets/data/security.json';
+import { List } from '../../model/list';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,10 @@ import { Card } from 'src/app/model/card';
 })
 export class HomeComponent implements OnInit {
 
-  cardList: Card[] = new Array<Card>();
+  lists: List[] = data;
 
   constructor() { }
   ngOnInit(): void {
-    
   }
 
 }

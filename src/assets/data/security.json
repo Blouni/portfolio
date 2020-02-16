@@ -1,0 +1,29 @@
+[
+    {
+        "title": "To do",
+        "cardList": [
+            {
+                "title": "Test",
+                "content": "First card to do"
+            }
+        ]
+    },
+    {
+        "title": "In progress",
+        "cardList": [
+            {
+                "title": "Test",
+                "content": "First card in progress"
+            }
+        ]
+    },
+    {
+        "title": "Done",
+        "cardList": [
+            {
+                "title": "Test",
+                "content": "First card Done"
+            }
+        ]
+    }
+]
