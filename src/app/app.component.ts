@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
 
   ngOnInit() {
-    particlesJS.load('particles-js', 'assets/data/particles.json', function() { console.log('callback - particles.js config loaded'); });
+    particlesJS.load('particles-js', 'assets/data/particles.json', function () { console.log('callback - particles.js config loaded'); });
   }
 }

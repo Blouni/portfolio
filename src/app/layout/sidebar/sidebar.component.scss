@@ -9,30 +9,101 @@
         opacity: 0.8;
     }
 }
-
+a { color: inherit; } 
 .sidebar-container{
     position: absolute;
     height: 100vh;
     width: 60px;
     background-color: #000000;
     transition: 0.5s;
-    &-active{
-        width: 400px;
-        background-color: white;
-    }
     .content{
         position: relative;
         height: 100%;
         width: 100%;
-
+        padding-top: 50px;
+        .header{
+            img{
+                transition: 0.5s;
+                border-radius: 25px;
+                height: 50px;
+                width: 50px;
+                margin-left: 5px;
+            }
+        }
         .toogle{
             position: absolute;
             top: 0px;
             right: 0px;
             width: 40px; 
-            height: 50px;
+            height: 20px;
             transition: 0.5s;
             padding: 11px;
+        }
+        .separator{
+            height: 1px;
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-bottom: 20px; 
+            background-color: white; 
+            background-image: linear-gradient(to right, #1E1E1E, white, #1E1E1E);
+        }
+        .section-tile{
+            font-size: 2em;
+            text-align: center;
+            width: 60px;
+        }
+    }
+    &-active{
+        width: 400px;
+        background-color: #1E1E1E;
+        .content {
+            .header{
+                .image-container{
+                    display: inline-block;
+                    width: 40%;
+                    text-align: center;
+                    img{
+                        transition: 0.5s;
+                        border-radius: 50px;
+                        height: 100px;
+                        width: 100px;
+                        vertical-align: middle;
+                    }
+                }
+                .description{
+                    vertical-align: middle;
+                    display: inline-block; 
+                    width: 60%; 
+                    overflow: hidden; 
+                    text-align: left;
+                    .title{
+                        min-width:200px; 
+                        font-size: 2em;
+                    }
+                    .subtitle{
+                        min-width:200px; 
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .section-tile{
+                overflow: hidden;
+                width: 100%;
+                a{
+                    position: relative;
+                    display: block;
+                    width: 60%;
+                    min-width: 200px;
+                    padding-left: 40%;
+                    text-align: left;
+                    .icon{
+                        position: absolute;
+                        left: 0px;
+                        margin-left: 20px;
+                    }
+                }
+            }
         }
     }
 }

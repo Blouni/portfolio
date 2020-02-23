@@ -1,4 +1,4 @@
-<div class="sidebar-background" [ngClass]="{'sidebar-background-active': active}" (click)="toogleSidebarIfActive()">
+<div *ngIf="active" class="sidebar-background" [ngClass]="{'sidebar-background-active': active}" (click)="toogleSidebarIfActive()">
 </div>
 <div class="sidebar-container" [ngClass]="{'sidebar-container-active': active}">
     <div class="content">
@@ -9,5 +9,26 @@
                 <span></span>
             </div>
         </div>
+        <div class="header">
+            <a routerLink="/home" (click)="updateRoute('home')">
+                <div class="image-container">
+                    <img src='/assets/img/profile_min.jpg'>
+                </div>
+                <div *ngIf="active" class="description">
+                    <div class="title">Philippe Dupart</div>
+                    <div class="subtitle">Software Engineer</div>
+                </div>
+
+            </a>
+        </div>
+        <ng-container *ngFor="let item of navBar" >
+            <div class="separator"></div>
+            <div class="section-tile">
+                <a routerLink="/{{item.url}}" (click)="updateRoute(item.url)">
+                    <i class="{{item.icon}}"></i>
+                    <span *ngIf="active">{{item.title}} </span>
+                </a>
+            </div>
+        </ng-container>
     </div>
 </div>
