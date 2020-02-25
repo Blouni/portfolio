@@ -6,6 +6,7 @@ import { DevopsComponent } from './devops/devops.component';
 import { SecurityComponent } from './security/security.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
+import { DataService } from '../shared/service/data.service';
 
 
 const routes: Routes = [
@@ -27,6 +28,9 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    DataService
   ]
 })
 export class ContentModule { }

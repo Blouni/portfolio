@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { List } from '../../model/list';
+import { DataService } from '../../shared/service/data.service';
 
 @Component({
   selector: 'app-devops',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevopsComponent implements OnInit {
 
-  constructor() { }
+  lists: Array<List> = new Array<List>();
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.lists = this.dataService.devopsData;
   }
 
 }

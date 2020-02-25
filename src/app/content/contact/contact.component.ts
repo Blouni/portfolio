@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../shared/service/data.service';
+import { Profile } from '../../model/profile';
 
 @Component({
   selector: 'app-contact',
@@ -6,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  constructor() { }
+  profile: Profile = new Profile();
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.profile = this.dataService.profile;
   }
 
 }

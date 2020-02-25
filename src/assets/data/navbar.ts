@@ -1,4 +1,6 @@
-[
+import { NavItem } from '../../app/model/navItem';
+
+export const navItems: Array<NavItem> = [
     {
         "url": "/development",
         "title": "Development",

@@ -1,10 +1,12 @@
-[
+import { List } from '../../app/model/list';
+
+export const devopsData: Array<List> = [
     {
         "title": "To do",
         "cardList": [
             {
                 "title": "Test",
-                "content": "First card to do"
+                "content": "First card to do devops"
             }
         ]
     },
@@ -13,7 +15,7 @@
         "cardList": [
             {
                 "title": "Test",
-                "content": "First card in progress"
+                "content": "First card in progress devops"
             }
         ]
     },
@@ -22,7 +24,7 @@
         "cardList": [
             {
                 "title": "Test",
-                "content": "First card Done"
+                "content": "First card Done devops"
             }
         ]
     }

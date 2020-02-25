@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../shared/service/data.service';
+import { List } from '../../model/list';
 
 @Component({
   selector: 'app-security',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecurityComponent implements OnInit {
 
-  constructor() { }
+  lists: Array<List> = new Array<List>();
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.lists = this.dataService.securityData;
   }
 
 }

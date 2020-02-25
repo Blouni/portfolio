@@ -2,16 +2,16 @@
     <div class="contact-section">
         <div class="text-container">
             <p>
-                Hi, If you you're interested in my works or just want to chat feel free to contact me by mail or LinkedIn.
+                Hi, if you you're interested in my works or just want to chat feel free to contact me by mail or LinkedIn.
             </p>
             <p>
                 I'm currently looking for a Software Engineering job in Zurich
             </p>
-            <p>
-                <i class="far fa-envelope"></i> Mail : mail.com
+            <p *ngIf="profile.mail !== ''">
+                <i class="far fa-envelope"></i> Mail : {{profile.mail}}
             </p>
-            <p>
-                <a target="_blank" href="https://www.linkedin.com/">
+            <p *ngIf="profile.linkedinLink !== ''">
+                <a target="_blank" href="{{profile.linkedinLink}}">
                     <i class="fab fa-linkedin"></i> LinkedIn</a>
             </p>
         </div>
